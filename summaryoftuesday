@@ -1,0 +1,502 @@
+# Git & GitHub Training Notes
+
+*Training Date:* July 14, 2026
+
+---
+
+# What is Git?
+
+Git is a Distributed Version Control System (DVCS) developed by Linus Torvalds.
+
+It helps developers:
+- Track changes in source code.
+- Work on the same project simultaneously.
+- Restore previous versions.
+- Maintain project history.
+- Manage software development efficiently.
+
+---
+
+# What is GitHub?
+
+GitHub is a cloud-based platform that hosts Git repositories.
+
+It allows developers to:
+- Store code online.
+- Collaborate with teams.
+- Review code using Pull Requests.
+- Track issues.
+- Integrate CI/CD pipelines.
+- Maintain project history.
+
+Git = Version Control Tool
+
+GitHub = Cloud Platform for Git Repositories
+
+---
+
+# Why Do We Need Git?
+
+Without Git:
+- Files become difficult to manage.
+- No history of changes.
+- Difficult collaboration.
+- Multiple copies of files.
+- No rollback.
+
+With Git:
+- Complete version history.
+- Easy collaboration.
+- Branching support.
+- Rollback capability.
+- Conflict management.
+
+---
+
+# What is Version Control?
+
+Version Control is the process of tracking changes made to files over time.
+
+Example:
+
+Version 1 → Login Page
+
+Version 2 → Added Forgot Password
+
+Version 3 → Fixed Login Bug
+
+Git stores every version.
+
+---
+
+# What is a Repository?
+
+Repository (Repo) is a storage location for project files and their version history.
+
+Types:
+- Local Repository
+- Remote Repository (GitHub)
+
+---
+
+# Git Architecture
+
+
+Working Directory
+        │
+        ▼
+ Staging Area (Index)
+        │
+        ▼
+ Local Repository (.git)
+        │
+        ▼
+ Remote Repository (GitHub)
+
+
+---
+
+# Working Directory
+
+The place where developers create or modify files.
+
+Example:
+
+
+README.md
+index.html
+app.py
+
+
+---
+
+# Staging Area
+
+Temporary area where selected changes are prepared before committing.
+
+Command:
+
+bash
+git add .
+
+
+---
+
+# Local Repository
+
+Stored inside the hidden *.git* folder.
+
+Contains:
+- Commit history
+- Branches
+- Configuration
+- Metadata
+
+---
+
+# Remote Repository
+
+Stored on GitHub.
+
+Purpose:
+- Backup
+- Collaboration
+- Central repository
+
+---
+
+# Git Workflow
+
+
+Create File
+      │
+      ▼
+Modify File
+      │
+      ▼
+git status
+      │
+      ▼
+git add .
+      │
+      ▼
+git commit
+      │
+      ▼
+git push
+      │
+      ▼
+GitHub
+
+
+---
+
+# Common Git Commands
+
+## Initialize Repository
+
+bash
+git init
+
+
+Creates a new Git repository.
+
+---
+
+## Check Status
+
+bash
+git status
+
+
+Shows:
+- Modified files
+- New files
+- Deleted files
+- Staged files
+
+---
+
+## Add Files
+
+Add all files:
+
+bash
+git add .
+
+
+Add single file:
+
+bash
+git add filename.txt
+
+
+---
+
+## Commit Changes
+
+bash
+git commit -m "Initial Commit"
+
+
+Creates a snapshot of staged changes.
+
+---
+
+## Connect GitHub Repository
+
+bash
+git remote add origin https://github.com/username/project.git
+
+
+---
+
+## Push Code
+
+bash
+git push origin main
+
+
+Uploads commits to GitHub.
+
+---
+
+## Pull Changes
+
+bash
+git pull origin main
+
+
+Downloads latest changes from GitHub.
+
+---
+
+## Clone Repository
+
+bash
+git clone https://github.com/username/project.git
+
+
+Copies repository to local machine.
+
+---
+
+## View Commit History
+
+bash
+git log
+
+
+Displays all commits.
+
+---
+
+## Check Remote Repository
+
+bash
+git remote -v
+
+
+Displays configured remote URLs.
+
+---
+
+# What is a Commit?
+
+A commit is a snapshot of your project at a particular point in time.
+
+Each commit has:
+- Unique SHA ID
+- Author
+- Date
+- Commit Message
+
+Example:
+
+bash
+git commit -m "Added Git notes"
+
+
+---
+
+# What is a Branch?
+
+A branch is an independent line of development.
+
+Default branch:
+
+
+main
+
+
+Developers create feature branches to work without affecting the main branch.
+
+Commands:
+
+bash
+git branch
+
+
+Create branch:
+
+bash
+git branch feature-login
+
+
+Switch branch:
+
+bash
+git checkout feature-login
+
+
+Create and switch:
+
+bash
+git checkout -b feature-login
+
+
+Merge:
+
+bash
+git merge feature-login
+
+
+---
+
+# What is GitHub Used For?
+
+- Source code hosting
+- Version control
+- Team collaboration
+- Pull Requests
+- Code Reviews
+- CI/CD
+- Open-source projects
+- Backup
+
+---
+
+# Git vs GitHub
+
+| Git | GitHub |
+|------|---------|
+| Version Control Tool | Cloud Platform |
+| Installed Locally | Hosted Online |
+| Works Offline | Internet Required for Sync |
+| Tracks Changes | Stores Repository |
+| Free/Open Source | Collaboration Platform |
+
+---
+
+# Daily Developer Workflow
+
+
+Pull Latest Code
+
+↓
+
+Create Feature Branch
+
+↓
+
+Write Code
+
+↓
+
+git status
+
+↓
+
+git add .
+
+↓
+
+git commit -m "Added Feature"
+
+↓
+
+git push
+
+↓
+
+Create Pull Request
+
+↓
+
+Code Review
+
+↓
+
+Merge into Main
+
+
+---
+
+# Benefits of Git
+
+- Version Control
+- Collaboration
+- Branching
+- Rollback
+- Fast Development
+- Backup
+- Easy Merge
+- Conflict Resolution
+
+---
+
+# Important Interview Questions
+
+### What is Git?
+
+Git is a Distributed Version Control System used to track source code changes.
+
+---
+
+### What is GitHub?
+
+GitHub is a cloud platform used to host Git repositories and collaborate with teams.
+
+---
+
+### Difference between Git and GitHub?
+
+Git manages version control.
+
+GitHub hosts Git repositories online.
+
+---
+
+### What is git add?
+
+Moves changes from the Working Directory to the Staging Area.
+
+---
+
+### What is git commit?
+
+Creates a permanent snapshot of staged changes.
+
+---
+
+### What is git push?
+
+Uploads local commits to GitHub.
+
+---
+
+### What is git pull?
+
+Downloads the latest changes from GitHub to the local repository.
+
+---
+
+### What is git clone?
+
+Downloads a complete copy of a GitHub repository.
+
+---
+
+### What is a Branch?
+
+A separate line of development that allows developers to work independently.
+
+---
+
+### What is a Merge?
+
+Combines changes from one branch into another.
+
+---
+
+### What is a Pull Request (PR)?
+
+A Pull Request is a request to merge code from one branch into another after code review.
+
+---
+
+# Summary
+
+Git is a version control system that helps track changes, manage code, and collaborate efficiently.
+
+GitHub is a cloud platform that hosts Git repositories and enables teamwork, code reviews, and version management.

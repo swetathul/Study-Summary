@@ -2,5 +2,5 @@
 Learning New Technology, tracking my progress.
 //Day1
 git add .
-git commit "This is my first program"
+git commit "i will add everything in the summary"
 git push
